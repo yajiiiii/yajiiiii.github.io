@@ -31,28 +31,47 @@
     
     <!-- Custom responsive styles -->
     <style>
-        /* Base responsive container */
         .responsive-container {
             width: 100%;
-            max-width: 1536px;
             margin: 0 auto;
             position: relative;
         }
-        
-        /* True responsive approach */
-        @media (max-width: 1536px) {
-            .responsive-scale {
-                transform-origin: top left;
-                transform: scale(calc(100vw / 1536));
-                width: 1536px;
-                height: auto;
-            }
-        }
-        
-        /* Ensure images are responsive */
+
+        /* Remove the fixed scaling approach */
         img {
             max-width: 100%;
             height: auto;
+        }
+
+        /* Add responsive breakpoints */
+        @media (max-width: 1536px) {
+            .header-text {
+                font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+            }
+            .date-time {
+                font-size: clamp(1.2rem, 2vw, 2rem);
+            }
+            .welcome-text {
+                font-size: clamp(2rem, 4vw, 3.5rem);
+            }
+            .student-name {
+                font-size: clamp(2.5rem, 5vw, 5.9rem);
+            }
+            .student-id {
+                font-size: clamp(1.5rem, 3vw, 3rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .student-info-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .footer-logos {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
         }
     </style>
     
@@ -63,7 +82,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
 </head>
 <body class="m-0 p-0 overflow-x-hidden min-h-screen">
-    <div class="responsive-container responsive-scale">
+    <div class="responsive-container">
         <!-- Header -->
         <header data-layer="Group 130" class="flex w-[1536px] h-[163px] relative">
             <div data-svg-wrapper data-layer="image" class="absolute left-[804px] top-0">
@@ -101,88 +120,107 @@
         </header>
         
         <!-- Main Content -->
-        <div class="w-full h-[2765px] bg-cover bg-center relative" style="background-image: url('images/Group 132.png')">
-            <div data-layer="Frame 131" class="absolute top-[65px] left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-[12px] w-[1323px]">
-                <div data-layer="YOU'RE IN" class="text-center text-white text-[40px] font-metropolis font-bold tracking-[0.5px] w-full">YOU'RE IN</div>
-                <div data-layer="Library Learning Commons - Main Library" class="text-center text-white text-[64px] font-metropolis font-bold tracking-[0.5px] w-full">Library Learning Commons - Main Library</div>
-            </div>
-            
-            <!-- Student Information Section -->
-            <div data-layer="Frame 131" class="absolute top-[364px] left-1/2 transform -translate-x-1/2 flex justify-between items-center w-[1330px] h-[445px]">
-                <!-- Student Photo -->
-                <div data-layer="Group 115" class="relative w-[445px] h-[445px]">
-                    <div data-layer="Rectangle 6" class="absolute w-[445px] h-[445px] bg-black/25 rounded-[20px]"></div>
-                    <div data-layer="Copy of JACULBE, IJAY F. 2" class="absolute w-[445px] h-[445px] pt-[9.78px] flex justify-center items-center">
-                        <div data-layer="Frame" class="flex justify-start items-center gap-[10px] self-stretch">
-                            <div data-layer="Mask group" class="relative w-[451.50px] h-[457.04px]">
-                                <img data-layer="Rectangle" class="absolute w-[451.50px] h-[457.04px]" src="images/photo1.png" alt="Student Photo" />
+        <div class="w-full min-h-screen bg-cover bg-center relative" style="background-image: url('images/Group 132.png')">
+            <!-- Update the fixed positioning to be more responsive -->
+            <div class="px-4 py-16 max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="header-text text-white font-metropolis font-bold mb-3">YOU'RE IN</div>
+                    <div class="header-text text-white font-metropolis font-bold">Library Learning Commons - Main Library</div>
+                </div>
+                
+                <!-- Student Information Section -->
+                <div class="student-info-container flex justify-between items-center gap-8 max-w-6xl mx-auto">
+                    <!-- Student Photo -->
+                    <div class="w-full max-w-md">
+                        <div class="aspect-square relative rounded-[20px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="images/photo1.png" alt="Student Photo" />
+                        </div>
+                    </div>
+                    
+                    <!-- Student Details -->
+                    <div class="flex-1">
+                        <div class="welcome-text text-white mb-4">Welcome!</div>
+                        <div class="student-name text-white font-bold mb-4">J. Duhaylungsod</div>
+                        <div class="student-id text-white">
+                            <span>Student ID: </span>
+                            <span>A122***82</span>
+                        </div>
+                        <div class="mt-6">
+                            <div class="inline-block bg-[#4CAF3D] text-white px-8 py-3 rounded-full text-2xl font-semibold">
+                                ENROLLED
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Student Details -->
-                <div data-layer="Group 117" class="relative w-[827px] h-[380px]">
-                    <!-- Enrollment Status -->
-                    <div data-layer="Pill Tab" class="absolute left-[2px] top-[279px] w-[425.73px] h-[101px] py-[28px] px-[72px] bg-[#4CAF3D] rounded-[18875.32px] flex justify-center items-center">
-                        <div data-layer="ENROLLED" class="text-white text-[52px] font-metropolis font-semibold">ENROLLED</div>
-                    </div>
-                    
-                    <!-- Student Information -->
-                    <div data-layer="Frame 131" class="absolute left-0 top-0 w-[827px] h-[254px] flex flex-col items-start gap-[26px]">
-                        <div data-layer="Welcome!" class="text-white text-[64px] font-metropolis font-medium tracking-[0.5px]">Welcome!</div>
-                        <div data-layer="J. Duhaylungsod" class="w-[827px] h-[42px] text-white text-[94.5px] font-metropolis font-bold leading-[35.44px]">J. Duhaylungsod</div>
-                        <div class="flex items-center">
-                            <div data-layer="Student ID:" class="text-white text-[48px] font-metropolis font-medium">Student ID: </div>
-                            <div data-layer="A122***82" class="text-white text-[48px] font-metropolis font-medium ml-2">A122***82</div>
+            </div>
+
+            <!-- Container below student information -->
+            <div class="mx-auto max-w-7xl px-4 my-16">
+                <div class="bg-white rounded-[18.82px] border border-[#E6E8EB] shadow-lg p-8">
+                    <!-- Content for the container -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="w-full bg-primary-blue py-8">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="footer-logos flex justify-center items-center gap-8 mb-8">
+                        <img src="images/librarylogo.png" alt="Library Learning Commons" class="w-[199px] h-[199px]"/>
+                        <div class="flex items-center gap-4">
+                            <img src="images/umakLogoFooter.png" alt="University of Makati" class="w-[133px] h-[145px]"/>
+                            <img src="images/makatiLogoFooter.png" alt="Makati City" class="w-[134px] h-[145px]"/>
                         </div>
                     </div>
+                    <div class="text-center text-white text-lg">
+                        Developed by Center for Information Technology
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Container positioned 114px below the student information section -->
-            <div data-layer="Container-2" class="absolute top-[923px] left-1/2 transform -translate-x-1/2 w-[1330px] h-[1420px] bg-white rounded-[18.82px] border border-[#E6E8EB] shadow-[0px_15.68px_23.53px_0px_rgba(0,0,0,0.1),0px_6.27px_9.41px_0px_rgba(0,0,0,0.1)]">
-                <!-- Content for the new container goes here -->
-            </div>
-          
-            <!-- Footer -->
-            <footer class="w-[1536px] h-[309px] absolute top-[2456px]">
-                <div data-layer="Rectangle 3" class="w-[1536px] h-[296px] left-0 top-[13px] absolute bg-primary-blue"></div>
-                <div data-layer="Developed by Center for Information Technology" class="left-[414px] top-[197px] absolute text-center text-white text-[32px] font-lato font-normal tracking-[0.5px]">Developed by Center for Information Technology</div>
-                <div data-layer="Library Learning Commons" class="left-[621px] top-0 absolute">
-                    <img src="images/librarylogo.png" alt="Library Learning Commons" class="w-[199px] h-[199px]"/>
-                </div>
-                <div data-layer="Group 138" class="w-[283px] h-[145px] left-[344px] top-[26px] absolute">
-                    <img data-layer="image" class="w-[133px] h-[145px] left-[150px] top-0 absolute" src="images/umakLogoFooter.png" />
-                    <img data-layer="image" class="w-[134px] h-[145px] left-0 top-0 absolute" src="images/makatiLogoFooter.png" />
-                </div>
-                <img data-layer="image 4" class="w-[194.81px] h-[194.81px] left-[810px] top-[2px] absolute" src="images/CIT-Center-for-Information-Technology-logo--705x705.png" />
-                <img data-layer="CIC Logo White 1" class="w-[200.96px] h-[200.84px] left-[1000px] top-[5px] absolute" src="images/CIClgo.png">
             </footer>
         </div>
     </div>
-    
-    <!-- JavaScript for responsive behavior -->
+
+    <!-- Remove the old JavaScript scaling -->
     <script>
-        // Function to handle responsive scaling
-        function handleResponsiveScaling() {
-            const container = document.querySelector('.responsive-scale');
-            if (window.innerWidth < 1536) {
-                const scale = window.innerWidth / 1536;
-                container.style.transform = `scale(${scale})`;
-                container.style.transformOrigin = 'top left';
-                container.style.width = '1536px';
-                container.style.height = 'auto';
-            } else {
-                container.style.transform = 'none';
-                container.style.width = '100%';
+        // Function to handle dynamic content sizing
+        function handleResponsiveness() {
+            // Get viewport dimensions
+            const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+            const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+            // Adjust font sizes dynamically
+            const root = document.documentElement;
+            root.style.setProperty('--base-size', `${Math.min(vw / 50, vh / 30)}px`);
+
+            // Adjust image sizes
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.style.maxHeight = `${vh * 0.8}px`; // Limit image height to 80% of viewport height
+            });
+
+            // Adjust container heights
+            const mainContent = document.querySelector('.responsive-container');
+            if (mainContent) {
+                mainContent.style.minHeight = `${vh}px`;
             }
         }
-        
-        // Initial call and event listener
-        window.addEventListener('load', handleResponsiveScaling);
-        window.addEventListener('resize', handleResponsiveScaling);
+
+        // Add event listeners for real-time responsiveness
+        window.addEventListener('load', handleResponsiveness);
+        window.addEventListener('resize', () => {
+            // Debounce the resize event to prevent excessive calculations
+            clearTimeout(window.resizeTimeout);
+            window.resizeTimeout = setTimeout(handleResponsiveness, 250);
+        });
+
+        // Handle orientation changes for mobile devices
+        window.addEventListener('orientationchange', handleResponsiveness);
+
+        // Ensure content is visible after loading
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.visibility = 'visible';
+        });
     </script>
 </body>
 </html>
+
 
