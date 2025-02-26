@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Attendance</title>
+    
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind with custom settings -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#111C4E',
+                        'accent-yellow': '#F8D822',
+                    },
+                    fontFamily: {
+                        'lato': ['Lato', 'sans-serif'],
+                        'metropolis': ['Metropolis', 'sans-serif'],
+                        'marcellus-sc': ['Marcellus SC', 'serif'],
+                        'marcellus': ['Marcellus', 'serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Custom responsive styles -->
+    <style>
+        /* Base responsive container */
+        .responsive-container {
+            width: 100%;
+            max-width: 1536px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        /* True responsive approach */
+        @media (max-width: 1536px) {
+            .responsive-scale {
+                transform-origin: top left;
+                transform: scale(calc(100vw / 1536));
+                width: 1536px;
+                height: auto;
+            }
+        }
+        
+        /* Ensure images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    
+    <!-- Font imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
+</head>
+<body class="m-0 p-0 overflow-x-hidden min-h-screen">
+    <div class="responsive-container responsive-scale">
+        <!-- Header -->
+        <header data-layer="Group 130" class="flex w-[1536px] h-[163px] relative">
+            <div data-svg-wrapper data-layer="image" class="absolute left-[804px] top-0">
+                <svg width="732" height="163" viewBox="0 0 732 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H732V163H0V0Z" fill="white"/>
+                </svg>
+            </div>
+            <div data-svg-wrapper data-layer="Background" class="absolute left-0 top-0">
+                <svg width="804" height="163" viewBox="0 0 804 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="804" height="165" fill="url(#paint0_linear_458_8)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_458_8" x1="402" y1="0" x2="402" y2="163" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#111C4E"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div data-layer="Group 110" class="w-[666px] h-[124px] absolute left-[850.40px] top-[21px]">
+                <div data-layer="Group 128" class="w-[422px] h-[77px] absolute left-[238.30px] top-0">
+                    <div data-layer="PM" class="absolute left-[324.5px] top-[2px] text-[#303030] text-[64px] font-metropolis font-normal tracking-[0.5px]">PM</div>
+                    <div data-layer="00:00:00" class="absolute left-0 top-0 text-[#303030] text-[64px] font-inter font-bold tracking-[0.5px]">00:00:00</div>
+                </div>
+                <div data-layer="Wednesday, September 31, 2025" class="w-[666px] h-[51px] absolute left-0 top-[73px] text-[#303030] text-[40px] font-metropolis font-semibold tracking-[0.5px]">Wednesday, September 31, 2025</div>
+            </div>
+            <div data-layer="Group 109" class="w-[709.60px] h-[119px] absolute left-[64px] top-[23px]">
+                <div data-layer="UNIVERSITY OF MAKATI" class="w-[568.60px] h-[45.12px] absolute left-[141px] top-[16px]">
+                    <span class="text-white text-[40px] font-marcellus-sc font-normal tracking-[0.5px]">U</span>
+                    <span class="text-white text-[36px] font-marcellus-sc font-normal tracking-[0.5px]">NIVERSITY OF </span>
+                    <span class="text-white text-[40px] font-marcellus-sc font-normal tracking-[0.5px]">M</span>
+                    <span class="text-white text-[36px] font-marcellus-sc font-normal tracking-[0.5px]">AKATI</span>
+                </div>
+                <div data-layer="Student Verification" class="w-[456px] h-[42px] absolute left-[141px] top-[61px] text-[#F8D822] text-[35px] font-marcellus font-normal tracking-[0.5px]">Student Verification</div>
+                <img data-layer="umakk lgo 1" class="w-[118px] h-[119px] absolute left-0 top-0" src="images/officiallogo.png" />
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <div class="w-full h-[2765px] bg-cover bg-center relative" style="background-image: url('images/Group 132.png')">
+            <div data-layer="Frame 131" class="absolute top-[65px] left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-[12px] w-[1323px]">
+                <div data-layer="YOU'RE IN" class="text-center text-white text-[40px] font-metropolis font-bold tracking-[0.5px] w-full">YOU'RE IN</div>
+                <div data-layer="Library Learning Commons - Main Library" class="text-center text-white text-[64px] font-metropolis font-bold tracking-[0.5px] w-full">Library Learning Commons - Main Library</div>
+            </div>
+            
+            <!-- Student Information Section -->
+            <div data-layer="Frame 131" class="absolute top-[364px] left-1/2 transform -translate-x-1/2 flex justify-between items-center w-[1330px] h-[445px]">
+                <!-- Student Photo -->
+                <div data-layer="Group 115" class="relative w-[445px] h-[445px]">
+                    <div data-layer="Rectangle 6" class="absolute w-[445px] h-[445px] bg-black/25 rounded-[20px]"></div>
+                    <div data-layer="Copy of JACULBE, IJAY F. 2" class="absolute w-[445px] h-[445px] pt-[9.78px] flex justify-center items-center">
+                        <div data-layer="Frame" class="flex justify-start items-center gap-[10px] self-stretch">
+                            <div data-layer="Mask group" class="relative w-[451.50px] h-[457.04px]">
+                                <img data-layer="Rectangle" class="absolute w-[451.50px] h-[457.04px]" src="images/photo1.png" alt="Student Photo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Student Details -->
+                <div data-layer="Group 117" class="relative w-[827px] h-[380px]">
+                    <!-- Enrollment Status -->
+                    <div data-layer="Pill Tab" class="absolute left-[2px] top-[279px] w-[425.73px] h-[101px] py-[28px] px-[72px] bg-[#4CAF3D] rounded-[18875.32px] flex justify-center items-center">
+                        <div data-layer="ENROLLED" class="text-white text-[52px] font-metropolis font-semibold">ENROLLED</div>
+                    </div>
+                    
+                    <!-- Student Information -->
+                    <div data-layer="Frame 131" class="absolute left-0 top-0 w-[827px] h-[254px] flex flex-col items-start gap-[26px]">
+                        <div data-layer="Welcome!" class="text-white text-[64px] font-metropolis font-medium tracking-[0.5px]">Welcome!</div>
+                        <div data-layer="J. Duhaylungsod" class="w-[827px] h-[42px] text-white text-[94.5px] font-metropolis font-bold leading-[35.44px]">J. Duhaylungsod</div>
+                        <div class="flex items-center">
+                            <div data-layer="Student ID:" class="text-white text-[48px] font-metropolis font-medium">Student ID: </div>
+                            <div data-layer="A122***82" class="text-white text-[48px] font-metropolis font-medium ml-2">A122***82</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Container positioned 114px below the student information section -->
+            <div data-layer="Container-2" class="absolute top-[923px] left-1/2 transform -translate-x-1/2 w-[1330px] h-[1420px] bg-white rounded-[18.82px] border border-[#E6E8EB] shadow-[0px_15.68px_23.53px_0px_rgba(0,0,0,0.1),0px_6.27px_9.41px_0px_rgba(0,0,0,0.1)]">
+                <!-- Content for the new container goes here -->
+            </div>
+          
+            <!-- Footer -->
+            <footer class="w-[1536px] h-[309px] absolute top-[2456px]">
+                <div data-layer="Rectangle 3" class="w-[1536px] h-[296px] left-0 top-[13px] absolute bg-primary-blue"></div>
+                <div data-layer="Developed by Center for Information Technology" class="left-[414px] top-[197px] absolute text-center text-white text-[32px] font-lato font-normal tracking-[0.5px]">Developed by Center for Information Technology</div>
+                <div data-layer="Library Learning Commons" class="left-[621px] top-0 absolute">
+                    <img src="images/librarylogo.png" alt="Library Learning Commons" class="w-[199px] h-[199px]"/>
+                </div>
+                <div data-layer="Group 138" class="w-[283px] h-[145px] left-[344px] top-[26px] absolute">
+                    <img data-layer="image" class="w-[133px] h-[145px] left-[150px] top-0 absolute" src="images/umakLogoFooter.png" />
+                    <img data-layer="image" class="w-[134px] h-[145px] left-0 top-0 absolute" src="images/makatiLogoFooter.png" />
+                </div>
+                <img data-layer="image 4" class="w-[194.81px] h-[194.81px] left-[810px] top-[2px] absolute" src="images/CIT-Center-for-Information-Technology-logo--705x705.png" />
+                <img data-layer="CIC Logo White 1" class="w-[200.96px] h-[200.84px] left-[1000px] top-[5px] absolute" src="images/CIClgo.png">
+            </footer>
+        </div>
+    </div>
+    
+    <!-- JavaScript for responsive behavior -->
+    <script>
+        // Function to handle responsive scaling
+        function handleResponsiveScaling() {
+            const container = document.querySelector('.responsive-scale');
+            if (window.innerWidth < 1536) {
+                const scale = window.innerWidth / 1536;
+                container.style.transform = `scale(${scale})`;
+                container.style.transformOrigin = 'top left';
+                container.style.width = '1536px';
+                container.style.height = 'auto';
+            } else {
+                container.style.transform = 'none';
+                container.style.width = '100%';
+            }
+        }
+        
+        // Initial call and event listener
+        window.addEventListener('load', handleResponsiveScaling);
+        window.addEventListener('resize', handleResponsiveScaling);
+    </script>
+</body>
+</html>
+
